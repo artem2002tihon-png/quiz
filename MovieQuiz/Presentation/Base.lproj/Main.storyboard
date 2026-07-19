@@ -74,6 +74,9 @@
                                                         <integer key="value" value="15"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="noButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iPF-ED-6bx"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfy-hG-JcC" userLabel="Yes button">
                                                 <rect key="frame" x="197" y="0.0" width="177" height="60"/>
@@ -91,6 +94,9 @@
                                                         <integer key="value" value="15"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="yesButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rO0-kw-fYe"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -118,7 +124,7 @@
                     <connections>
                         <outlet property="counterLabel" destination="Ph5-28-v3A" id="K3p-DW-aAe"/>
                         <outlet property="imageView" destination="Unz-va-rNe" id="TyE-yg-Hju"/>
-                        <outlet property="noButton" destination="Jdh-mr-lJy" id="6LA-ft-Pjr"/>
+                        <outlet property="noButton" destination="Jdh-mr-lJy" id="zT7-6G-zlg"/>
                         <outlet property="textLabel" destination="4yl-0Q-19L" id="NgF-N8-vET"/>
                         <outlet property="yesButton" destination="qfy-hG-JcC" id="eSa-tp-vsx"/>
                     </connections>

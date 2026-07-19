@@ -30,19 +30,26 @@ final class MovieQuizViewController: UIViewController {
         let firstQuestion = questions[currentQuestionIndex]
         let viewModel = convert (model: firstQuestion)
         show (quiz: viewModel)
+        
     }
-    @IBAction func noButtonClicked(_ sender: UIButton) {
+
+//===============================
+    
+    @IBAction func noButtonClicked(_ sender: Any) {
         let currentQuestion = questions[currentQuestionIndex]
         let givenAnswer = false
-        
+                
         showAnswerResult(isCorrect: givenAnswer == currentQuestion.correctAnswer)
     }
-    @IBAction func yesButtonClicked(_ sender: UIButton) {
+    @IBAction func yesButtonClicked(_ sender: Any) {
         let currentQuestion = questions[currentQuestionIndex]
         let givenAnswer = true
-        
+                
         showAnswerResult(isCorrect: givenAnswer == currentQuestion.correctAnswer)
     }
+    
+//===============================
+    
     private func showAnswerResult(isCorrect: Bool) {
         if isCorrect {
             correctAnswers += 1
@@ -59,6 +66,10 @@ final class MovieQuizViewController: UIViewController {
         }
     }
     private func showNextQuestionResults() {
+        
+        yesButton.isEnabled = true
+        noButton.isEnabled = true
+        
         if currentQuestionIndex == questions.count - 1 {
             gamesCount += 1
             totalCorrectAnswers += correctAnswers
@@ -69,7 +80,7 @@ final class MovieQuizViewController: UIViewController {
                 bestScoreData = dateFormatter.string(from: Date())
             }
         let totalQuestionAsked = gamesCount * questions.count
-            let averageScore = Double(totalCorrectAnswers) / Double(totalQuestionAsked) * 100
+        let averageScore = Double(totalCorrectAnswers) / Double(totalQuestionAsked) * 100
             
             
             let text = """
