@@ -1,3 +1,11 @@
+//
+//  File.swift
+//  MovieQuiz
+//
+//  Created by Артём Тихонов on 28.07.2026.
+//
+
+
 weak var delegate: QuestionFactoryDelegate?
 
 func requestNextQuestion() {
