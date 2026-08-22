@@ -2,7 +2,6 @@ import UIKit
 
 final class StatisticService: StatisticServiceProtocol {
     
-
     private enum Keys: String {
         case gamesCount
         case bestGameCorrect
