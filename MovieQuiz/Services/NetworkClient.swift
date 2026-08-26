@@ -1,6 +1,10 @@
 import UIKit
 
-struct NetworkClient {
+protocol NetworkRouting {
+    func fetch(url: URL, handler: @escaping (Result<Data, Error>) -> Void)
+}
+
+struct NetworkClient: NetworkRouting {
     private enum NetworkError: Error {
         case codeError
     }
@@ -24,5 +28,4 @@ struct NetworkClient {
         task.resume()
     }
 }
-    
 

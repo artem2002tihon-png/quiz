@@ -4,7 +4,6 @@ final class QuestionFactory: QuestionFactoryProtocol {
     
     //MARK: - properties
     private let moviesLoader: MoviesLoading
-//    private weak var deligate: QuestionFactoryDelegate?
     private var movies: [MostPopularMovie] = []
     weak var delegate: QuestionFactoryDelegate?
     
